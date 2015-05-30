@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='utf8'>
+  <title>null island buoy</title>
+  <meta name='description' content='Hello from your friendly neighborhood Null Island buoy!'>
+  <meta name='viewport' content='width=device-width,initial-scale=1'>
+  <meta property='og:title' content='Null Island Buoy'>
+  <meta property='og:type' content='website'>
+  <meta property='og:url' content='http://louh.github.io/null-island-buoy/'>
+  <meta property='og:image' content='http://louh.github.io/null-island-buoy/preview.png'>
+  <meta name='twitter:card' content='summary_large_image'>
+  <meta name='twitter:site' content='@mapzen'>
+  <meta name='twitter:title' content='Null Island Buoy'>
+  <meta name='twitter:description' content='Hello from your friendly neighborhood Null Island buoy!'>
+  <meta name='twitter:image:src' content='http://louh.github.io/null-island-buoy/preview.png'>
+  <meta name='twitter:domain' content='mapzen.com'>
+  <meta name='twitter:creator' content='@mapzen'>
+  <link rel='icon' href='favicon.ico' type='icon/x-icon'>
+  <link rel='shortcut icon' href='favicon.ico' type='icon/x-icon'>
+  <script src='modernizr.custom.63370.js'></script>
+  <style type='text/css'>
+    html {
+      width: 100%;
+      height: 100%;
+    }
+
+    body {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      background-color: #005d7b;
+      overflow: hidden;
+
+      user-select: none;
+      -moz-user-select: none;
+      pointer-events: none;
+    }
+
+    .buoy-container {
+      position: absolute;
+      width: 100%;
+      top: 12%;
+      bottom: 45%;
+      -webkit-animation: bob 3.1s infinite;
+              animation: bob 3.1s infinite;
+    }
+
+    .buoy {
+      position: absolute;
+      display: inline-block;
+      height: 100%;
+      bottom: 0;
+      right: 15%;
+
+      -webkit-animation: swing 4.4s infinite;
+              animation: swing 4.4s infinite;
+    }
+
+    .waves {
+      position: absolute;
+      width: 120%;
+      left: -10px;
+      background-color: transparent;
+      background-image: url(waves.svg);
+      background-size: 10% auto;
+
+      -webkit-animation: oscillate 6s infinite;
+              animation: oscillate 6s infinite;
+    }
+
+    @media (orientation: landscape) {
+      .waves {
+        background-size: 6% auto;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .waves {
+        background-size: 12% auto;
+      }
+    }
+
+    .rear-waves {
+      top: -10%;
+      bottom: 47%;
+      background-position: center bottom;
+    }
+
+    .front-waves {
+      top: 53.25%;
+      bottom: 0;
+      background-position: center top;
+    }
+
+    .alternate {
+      background-image: url(waves-alt.svg);
+
+      -webkit-animation: oscillate 6s infinite;
+              animation: oscillate 6s infinite;
+      -webkit-animation-delay: -2s;
+              animation-delay: -2s;
+    }
+
+    .water-mask {
+      position: absolute;
+      width: 120%;
+      top: 65%;
+      left: -10px;
+      bottom: 0;
+      background-color: #005d7b;
+
+      -webkit-animation: oscillate 6s infinite;
+              animation: oscillate 6s infinite;
+    }
+
+    .waves-mask {
+      top: 52.25%;
+      bottom: 0;
+      background-image: url(waves-mask.svg);
+      background-color: transparent;
+      background-position: center top;
+    }
+
+    @-webkit-keyframes bob {
+      0% {
+        -webkit-transform: translate(0, 0);
+                transform: translate(0, 0);
+        animation-timing-function: ease-in-out;
+       }
+
+      50% {
+        -webkit-transform: translate(0, 8px);
+                transform: translate(0, 8px);
+        animation-timing-function: ease-in-out;
+       }
+
+      100% {
+        -webkit-transform: translate(0, 0);
+                transform: translate(0, 0);
+        animation-timing-function: ease-in-out;
+      }
+    }
+
+    @keyframes bob {
+      0% {
+        transform: translate(0, 0);
+        animation-timing-function: ease-in-out;
+      }
+
+      50% {
+        transform: translate(0, 8px);
+        animation-timing-function: ease-in-out;
+      }
+
+      100% {
+        transform: translate(0, 0);
+        animation-timing-function: ease-in-out;
+      }
+    }
+
+    @-webkit-keyframes swing {
+      0% {
+        -webkit-transform: rotate(-7deg);
+                transform: rotate(-7deg);
+        -webkit-transform-origin: 50% 85%;
+                transform-origin: 50% 85%;
+        animation-timing-function: ease-in-out;
+      }
+
+      50% {
+        -webkit-transform: rotate(7deg);
+                transform: rotate(7deg);
+        -webkit-transform-origin: 50% 85%;
+                transform-origin: 50% 85%;
+        animation-timing-function: ease-in-out;
+      }
+
+      100% {
+        -webkit-transform: rotate(-7deg);
+                transform: rotate(-7deg);
+        -webkit-transform-origin: 50% 85%;
+                transform-origin: 50% 85%;
+        animation-timing-function: ease-in-out;
+      }
+    }
+
+    @keyframes swing {
+      0% {
+        transform: rotate(-7deg);
+        transform-origin: 50% 85%;
+        animation-timing-function: ease-in-out;
+      }
+
+      50% {
+        transform: rotate(7deg);
+        transform-origin: 50% 85%;
+        animation-timing-function: ease-in-out;
+       }
+
+      100% {
+        transform: rotate(-7deg);
+        transform-origin: 50% 85%;
+        animation-timing-function: ease-in-out;
+      }
+    }
+
+    @-webkit-keyframes oscillate {
+      0% {
+        -webkit-transform: translate(0px, 0px);
+                transform: translate(0px, 0px);
+        animation-timing-function: ease-in-out;
+      }
+
+      50% {
+        -webkit-transform: translate(3%, 0px);
+                transform: translate(3%, 0px);
+        animation-timing-function: ease-in-out;
+      }
+
+      100% {
+        -webkit-transform: translate(0px, 0px);
+                transform: translate(0px, 0px);
+        animation-timing-function: ease-in-out;
+      }
+    }
+
+    @keyframes oscillate {
+      0% {
+        transform: translate(0px, 0px);
+        animation-timing-function: ease-in-out;
+      }
+
+      50% {
+        transform: translate(8px, 0px);
+        animation-timing-function: ease-in-out;
+      }
+
+      100% {
+        transform: translate(0px, 0px);
+        animation-timing-function: ease-in-out;
+      }
+    }
+
+    .old-browser {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      color: white;
+      font-size: 4em;
+      font-weight: bold;
+      font-family: Gotham, Helvetica, Arial, sans-serif;
+      background-color: #005d7b;
+      padding: 10px;
+      user-select: auto;
+      pointer-events: all;
+      overflow: auto;
+      display: none;
+    }
+    .old-browser p {
+      margin: 0;
+      margin-bottom: 1em;
+    }
+    .old-browser a,
+    .old-browser a:visited,
+    .old-browser a:active {
+      color: lightgray;
+    }
+    body.no-svgasimg .old-browser,
+    body.no-bgpositionxy .old-browser,
+    body.no-bgrepeatround .old-browser,
+    body.no-bgrepeatspace .old-browser,
+    body.no-csstransforms .old-browser,
+    body.no-backgroundsize .old-browser {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class='waves rear-waves'></div>
+  <div class='waves rear-waves alternate'></div>
+  <div class='buoy-container'><img src='null-island-buoy.svg' class='buoy' alt='buoy'></div>
+  <div class='water-mask'></div>
+  <div class='waves waves-mask'></div>
+  <div class='waves front-waves'></div>
+  <div class='waves front-waves alternate'></div>
+  <div class='old-browser'><p>Hey, your browser is too old to view this page. Try using <a href='http://browsehappy.com/'>a newer one</a> and come on back!</p><img src='preview.png' style='width: 100%;'></div>
+</body>
+</html>
