@@ -102,15 +102,6 @@
               animation-delay: -2s;
     }
 
-    .water-mask {
-      position: absolute;
-      width: 120%;
-      top: 65%;
-      left: -10px;
-      bottom: 0;
-      background-color: #005d7b;
-    }
-
     .waves-mask {
       top: 52.25%;
       bottom: 0;
@@ -272,20 +263,12 @@
     html.no-backgroundsize .old-browser {
       display: block;
     }
-
-    html.no-svgasimg .water-mask,
-    html.no-csstransforms .water-mask,
-    html.no-cssanimations .water-mask,
-    html.no-backgroundsize .water-mask {
-      display: none;
-    }
   </style>
 </head>
 <body>
   <div class='waves rear-waves'></div>
   <div class='waves rear-waves alternate'></div>
   <div class='buoy-container'><img src='null-island-buoy.svg' class='buoy' alt='buoy'></div>
-  <div class='water-mask'></div>
   <div class='waves waves-mask'></div>
   <div class='waves front-waves'></div>
   <div class='waves front-waves alternate'></div>
