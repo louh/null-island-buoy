@@ -109,9 +109,6 @@
       left: -10px;
       bottom: 0;
       background-color: #005d7b;
-
-      -webkit-animation: oscillate 6s infinite;
-              animation: oscillate 6s infinite;
     }
 
     .waves-mask {
@@ -274,6 +271,13 @@
     html.no-cssanimations .old-browser,
     html.no-backgroundsize .old-browser {
       display: block;
+    }
+
+    html.no-svgasimg .water-mask,
+    html.no-csstransforms .water-mask,
+    html.no-cssanimations .water-mask,
+    html.no-backgroundsize .water-mask {
+      display: none;
     }
   </style>
 </head>
