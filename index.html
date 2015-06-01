@@ -94,6 +94,7 @@
     }
 
     .alternate {
+      left: -5.75%;
       background-image: url(data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2064%2064%22%20width%3D%2264%22%20height%3D%2264%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20stroke-linejoin%3D%22round%22%20stroke-miterlimit%3D%221.414%22%3E%3Cpath%20d%3D%22M50.542%2045.9C46.355%2040.7%2041.57%2034.8%2032%2034.8c-9.57%200-14.355%205.9-18.542%2011.1C9.57%2050.8%206.48%2054.6%200%2054.6v6.6c9.57%200%2014.355-5.9%2018.542-11.1C22.43%2045.2%2025.52%2041.4%2032%2041.4s9.47%203.8%2013.458%208.7C49.645%2055.3%2054.43%2061.2%2064%2061.2v-6.6c-6.48%200-9.57-3.8-13.458-8.7z%22%20fill%3D%22%23fff%22%20fill-rule%3D%22nonzero%22%2F%3E%3C%2Fsvg%3E);
 
       -webkit-animation: oscillate 6s infinite;
@@ -195,37 +196,37 @@
 
     @-webkit-keyframes oscillate {
       0% {
-        -webkit-transform: translate(0px, 0px);
-                transform: translate(0px, 0px);
+        -webkit-transform: translate(-0.25%, 0px);
+                transform: translate(-0.25%, 0px);
         animation-timing-function: ease-in-out;
       }
 
       50% {
-        -webkit-transform: translate(8px, 0px);
-                transform: translate(8px, 0px);
+        -webkit-transform: translate(0.25%, 0px);
+                transform: translate(0.25%, 0px);
         animation-timing-function: ease-in-out;
       }
 
       100% {
-        -webkit-transform: translate(0px, 0px);
-                transform: translate(0px, 0px);
+        -webkit-transform: translate(-0.25%, 0px);
+                transform: translate(-0.25%, 0px);
         animation-timing-function: ease-in-out;
       }
     }
 
     @keyframes oscillate {
       0% {
-        transform: translate(0px, 0px);
+        transform: translate(-0.25%, 0px);
         animation-timing-function: ease-in-out;
       }
 
       50% {
-        transform: translate(8px, 0px);
+        transform: translate(0.25%, 0px);
         animation-timing-function: ease-in-out;
       }
 
       100% {
-        transform: translate(0px, 0px);
+        transform: translate(-0.25%, 0px);
         animation-timing-function: ease-in-out;
       }
     }
